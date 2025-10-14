@@ -1,5 +1,4 @@
 import pickle
-import numpy as np
 
 # Load scaler and best model
 with open("scaler.pkl", "rb") as f:
