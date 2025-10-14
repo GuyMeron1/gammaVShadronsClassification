@@ -61,7 +61,6 @@ def plot_class_balance():
 
 def plot_model_performance_from_test():
     model_names = ["knn", "naive_bayes", "decision_tree", "svm", "neural_net"]
-
     with open("test_data.pkl", "rb") as f:
         X_test, Y_test = pickle.load(f)
 
