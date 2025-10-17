@@ -2,7 +2,7 @@ import pandas as pd
 import pickle
 from imblearn.over_sampling import RandomOverSampler
 import matplotlib.pyplot as plt
-from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 import seaborn as sns
 import warnings
 from sklearn.exceptions import ConvergenceWarning
@@ -71,8 +71,6 @@ def plot_model_performance_from_test():
 
     scores = {}
     for name, model in models.items():
-        if isinstance(model, tuple):
-            model, _ = model
         y_pred = model.predict(X_test)
         scores[name] = {
             "F1": f1_score(Y_test, y_pred, average="macro"),
@@ -107,6 +105,47 @@ def plot_confusion_matrix_best():
     plt.tight_layout()
     plt.show()
 
+def plot_knn_metrics():
+    # Load metrics
+    with open("knn_metrics.pkl", "rb") as f:
+        metrics = pickle.load(f)
+
+    # Load the best KNN model (selected based on validation performance) to retrieve its chosen K and p values
+    with open("knn_model.pkl", "rb") as f:
+        best_knn = pickle.load(f)
+    best_k = best_knn.n_neighbors
+    best_p = best_knn.p
+
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6), sharey=True)
+
+    for idx, p_val in enumerate(sorted(set(p for _, p in metrics.keys()))):
+        ax = axes[idx]
+        ks = sorted([k for k, p in metrics.keys() if p == p_val])
+        accs = [metrics[(k, p_val)]["Accuracy"] for k in ks]
+        f1s = [metrics[(k, p_val)]["F1"] for k in ks]
+
+        ax.plot(ks, accs, marker='o', label="Accuracy")
+        ax.plot(ks, f1s, marker='s', label="F1 Score")
+        ax.set_title(f"KNN Metrics (p={p_val})")
+        ax.set_xlabel("K")
+        if idx == 0:
+            ax.set_ylabel("Score")
+        else:
+            ax.set_ylabel("Score")
+        ax.set_xticks(ks)
+        ax.grid(True, alpha=0.3)
+        ax.legend()
+
+        # Highlight the K chosen based on validation performance
+        if p_val == best_p:
+            best_idx = ks.index(best_k)
+            ax.axvline(x=best_k, color='red', linestyle='--', label=f"Chosen K={best_k}")
+            ax.scatter(best_k, accs[best_idx], color='red', s=100, edgecolor='k')
+            ax.scatter(best_k, f1s[best_idx], color='red', s=100, edgecolor='k')
+
+    plt.tight_layout()
+    plt.show()
+
 def plot_nn_training_metrics():
     warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
@@ -126,7 +165,6 @@ def plot_nn_training_metrics():
     plt.tight_layout()
     plt.show()
 
-
 #Visualizations
 
 plot_feature_distributions()
@@ -136,5 +174,7 @@ plot_class_balance()
 plot_model_performance_from_test()
 
 plot_confusion_matrix_best()
+
+plot_knn_metrics()
 
 plot_nn_training_metrics()

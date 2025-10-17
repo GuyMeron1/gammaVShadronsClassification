@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f755d78e-ae70-43cc-bf40-75fb40e1bb5c" name="Changes" comment="delete unnecessary prints.">
-      <change afterPath="$PROJECT_DIR$/data_visualizations.py" afterDir="false" />
+    <list default="true" id="f755d78e-ae70-43cc-bf40-75fb40e1bb5c" name="Changes" comment="Add data_visualizations.py and make the necessary related changes and adjustments.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/best_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/best_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_visualizations.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_visualizations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decision_tree_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_model.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knn_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/knn_model.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/naive_bayes_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/naive_bayes_model.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neural_net_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/neural_net_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nn_training_metrics.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/nn_training_metrics.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svm_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/svm_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_data.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/train_data.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,21 +53,21 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.data_visualizations.executor": "Run",
-    "Python.draft.executor": "Run",
-    "Python.file.executor": "Run",
-    "Python.predict.executor": "Run",
-    "Python.train_models.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.data_visualizations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.draft.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_models.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.data_visualizations">
     <configuration name="data_visualizations" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ML - MAGICGammaTelescope" />
@@ -165,12 +166,29 @@
       <option name="project" value="LOCAL" />
       <updated>1759930403103</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add data_visualizations.py and make the necessary related changes and adjustments.">
+      <option name="closed" value="true" />
+      <created>1760463745930</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760463745930</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add data_visualizations.py and make the necessary related changes and adjustments.">
+      <option name="closed" value="true" />
+      <created>1760463920209</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760463920209</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add project files" />
     <MESSAGE value="delete unnecessary prints." />
-    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary prints." />
+    <MESSAGE value="Add data_visualizations.py and make the necessary related changes and adjustments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add data_visualizations.py and make the necessary related changes and adjustments." />
   </component>
 </project>
